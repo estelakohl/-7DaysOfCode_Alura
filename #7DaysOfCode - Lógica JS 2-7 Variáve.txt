@@ -1,0 +1,9 @@
+#7DaysOfCode - Lógica JS 2/7: Variáveis
+
+// Pedindo para o usuário responder as perguntas
+let nome = prompt('Qual o seu nome?'); // Pede o nome do usuário e armazena na variável nome
+let idade = prompt('Quantos anos você tem?'); // Pede a idade do usuário e armazena na variável idade
+let linguagem = prompt('Qual linguagem de programação você está estudando?'); // Pede a linguagem de programação que o usuário está estudando e armazena na variável linguagem
+
+// Exibindo a mensagem com as informações fornecidas pelo usuário
+console.log(`Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`);

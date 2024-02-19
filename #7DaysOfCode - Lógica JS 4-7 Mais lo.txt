@@ -1,0 +1,38 @@
+#7DaysOfCode - Lógica JS 4/7: Mais loops e randomização
+
+// Definindo o número mínimo e máximo para o número secreto (entre 0 e 10)
+const minimo = 0;
+const maximo = 10;
+
+// Gerando o número secreto aleatoriamente entre minimo e maximo
+const numeroSecreto = Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
+
+// Número de tentativas disponíveis
+let tentativasRestantes = 3;
+
+// Função principal do jogo
+function jogarAdivinhacao() {
+    while (tentativasRestantes > 0) {
+        // Solicita ao usuário para chutar um número
+        const chute = parseInt(prompt("Digite o seu chute (um número de 0 a 10): "));
+
+        // Verifica se o chute está correto
+        if (chute === numeroSecreto) {
+            alert("Parabéns! Você acertou o número!");
+            return; // Sai da função se o usuário acertar
+        } else {
+            // Reduz o número de tentativas restantes
+            tentativasRestantes--;
+
+            if (tentativasRestantes > 0) {
+                alert(`Chute errado. Você tem ${tentativasRestantes} tentativas restantes.`);
+            } else {
+                alert(`Você esgotou suas tentativas. O número correto era: ${numeroSecreto}`);
+                return; // Sai da função
+            }
+        }
+    }
+}
+
+// Chamando a função principal para iniciar o jogo
+jogarAdivinhacao();
